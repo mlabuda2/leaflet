@@ -19,3 +19,4 @@ Autor: Mateusz Labuda, nr indeksu 243689
 + [x] [_GeoJSON_](http://geojson.org/).
 + [x] [Simply edit GeoJSON map data](http://geojson.io).
 + [x] [Leaflet JavaScript Library](http://leafletjs.com/).
++ [x] Pull request to [projects.md](https://github.com/h5c3j/ti/blob/master/projects.md).
