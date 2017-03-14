@@ -1,33 +1,21 @@
-﻿## My Gulp 101
+﻿## Techniki Internetowe
 
 ```sh
-Edytował: Mateusz Labuda, nr indeksu 243689
+Autor: Mateusz Labuda, nr indeksu 243689
 ```
 
-TODO 1:
+### Zaliczenia
 
-- [x] google-map 
+1\. [deadline 05.03.2017] [Mapka Google Components](https://mlabdua2.github.io/pierwszastrona)
++ [x] Adding google-map to first WWW. 
++ [x] [gulp-server-livereload](https://www.npmjs.com/package/gulp-server-livereload)
++ [x] Pull request to [projects.md](https://github.com/h5c3j/ti/blob/master/projects.md).
++ [x] Gulp [gulp](http://gulpjs.com).
++ [x] Configuration gulpfile.js.
 
-- [x] [gulp-server-livereload](https://www.npmjs.com/package/gulp-server-livereload)
-- [ ] concat and minify assets
-- [ ] [gulp-markdown](https://www.npmjs.com/package/gulp-markdown) lub
-  [gulp-asciidoctor](https://github.com/asciidoctor/gulp-asciidoctor)
-- [ ] templates
-- [ ] [delete generated folders](https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md)
-- [ ] copy only changed files
+2\. [deadline 22.03.2017] [GeoJSON](https://mlabuda2.github.io/leaflet/geojson.html)
 
-TODO 2:
-
-- [ ] [Setup a new project with Phenomic](https://phenomic.io/docs/setup/)
-
-
-### Uruchamiamy stronę na GitHub
-
-```sh
-rename dist docs # ?
-```
-
-
-### Uruchamiamy stronę na Firebase
-
-TODO
++ [x] [Geometry Objects] http://geojson.org/geojson-spec.html#geometry-objects): _Point_, _LineString_ and _Polygon_.
++ [x] [_GeoJSON_](http://geojson.org/).
++ [x] [Simply edit GeoJSON map data](http://geojson.io).
++ [x] [Leaflet JavaScript Library](http://leafletjs.com/).
