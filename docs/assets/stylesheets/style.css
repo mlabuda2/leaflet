@@ -1,7 +1,8 @@
 body {
   background: #F1B269; }
 
-#mapka {
+#map {
+      height: 733px;
       position: absolute;
       top:0px;
       bottom:0px;
