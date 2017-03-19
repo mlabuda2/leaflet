@@ -23,7 +23,7 @@ Autor: Mateusz Labuda, nr indeksu 243689
 
 3\. responsive
 
-##Alignment Matters :```sh
+## Alignment Matters : ```sh
 3½ simple rules to follow:
 1. Numerical data is right-aligned
 2. Textual data is left-aligned
