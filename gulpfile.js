@@ -7,7 +7,7 @@
 // });
 
 var gulp   = require('gulp'),
-    livereload = require('gulp-livereload');
+    livereload = require('gulp-livereload'),
     connect = require('gulp-connect');
 
 // define the default task and add the watch task to it
@@ -20,7 +20,7 @@ gulp.task('html', function() {
 
 var htmlDir = "docs/*.html";
 var cssDir =  "docs/assets/stylesheets/*.css";
-var jsDir = "docs/assets/js/*.js";
+// var jsDir = "docs/assets/js/*.js";
 // var cssDir2 =  "docs/assets/stylesheets/*.css";
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', function() {
@@ -31,15 +31,15 @@ gulp.task('watch', function() {
   gulp.watch(cssDir, function(){
     gulp.src(cssDir).pipe(livereload());
   });
-  gulp.watch(jsDir, function(){
-    gulp.src(jsDir).pipe(livereload());
-  });
+  // gulp.watch(jsDir, function(){
+  //   gulp.src(jsDir).pipe(livereload());
+  // });
   // gulp.watch('src/index.html', ['html']);
   // gulp.watch('docs/index.html', ['html']);
   connect.server({
     livereload: true,
     directoryListing: true,
-    defaultFile: 'geojson.html'
+    defaultFile: 'responsivesite.html'
   });
 });
 
