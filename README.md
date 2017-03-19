@@ -15,7 +15,7 @@ Autor: Mateusz Labuda, nr indeksu 243689
 
 2\. [deadline 22.03.2017] [GeoJSON](https://mlabuda2.github.io/leaflet/geojson.html)
 
-+ [x] [Geometry Objects] http://geojson.org/geojson-spec.html#geometry-objects): _Point_, _LineString_ and _Polygon_.
++ [x] [Geometry Objects](http://geojson.org/geojson-spec.html#geometry-objects): _Point_, _LineString_ and _Polygon_.
 + [x] [_GeoJSON_](http://geojson.org/).
 + [x] [Simply edit GeoJSON map data](http://geojson.io).
 + [x] [Leaflet JavaScript Library](http://leafletjs.com/).
