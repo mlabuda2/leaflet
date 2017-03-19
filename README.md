@@ -22,3 +22,11 @@ Autor: Mateusz Labuda, nr indeksu 243689
 + [x] Pull request to [projects.md](https://github.com/h5c3j/ti/blob/master/projects.md).
 
 3\. responsive
+```sh
+#Alignment Matters
+3½ simple rules to follow:
+1. Numerical data is right-aligned
+2. Textual data is left-aligned
+3. Headers are aligned with their data
+3½. Don’t use center alignment.
+```
