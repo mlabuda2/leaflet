@@ -1,0 +1,13 @@
+.th {
+    text-align:left;
+    font-weight:bold;
+
+	border-width: 1px;
+	padding: 2px;
+	border-style: solid;
+	border-color: #aaaaaa;
+	background-color: #CCCCCC;
+    font-size:12px;
+    font-family:tahoma;
+    overflow:hidden ;
+}

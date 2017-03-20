@@ -1,3 +1,4 @@
+var plan =
 [
   {"dzien":"Czwartek",
   "godz":"14:oo",
@@ -107,3 +108,5 @@
   "uwagi":"15:30-16:15",
   "datado":"2017-06-09"}
 ]
+
+;

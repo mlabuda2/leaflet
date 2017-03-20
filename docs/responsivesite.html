@@ -1,29 +1,57 @@
-<table>
-	<thead>
-		<tr>
-			<th>Dzien Tygodnia</th>
-			<th>Godzina</th>
-			<th>Przedmiot</th>
-			<th>Grupa</th>
-			<th>Sala</th>
-			<th>Rodzaj zajęć</th>
-			<th>Uwagi</th>
-		</tr>
-	</thead>
-  <tbody>
-		<tr>
-			<td>Czwartek</td>
-			<td>14:00</td>
-			<td>Seminarium</td>
-			<td></td>
-			<td>209</td>
-			<td>seminarium</td>
-			<td></td>
-		</tr>
-	</tbody>
-</table>
+<!DOCTYPE html>
+<head>
 
+		<title>Plan</title>
+		<h1>Responsywna tableka z planem zajęć</h1>
+		<!-- <script src="assets/tablescript.js" type="text/javascript"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="assets/plan.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="assets/stylesheets/tab.style.css" />
+</head>
 
+<body>
+<script>
+	var myArray = [10,20,30];
+
+jQuery.each( myArray, function(index, value) {
+   console.log('element at index ' + index + ' is ' + value);
+});
+</script>
+	<table id="plan" class='table'>
+		<thead>
+			<tr>
+				<th>Dzien Tygodnia</th>
+				<th>Godzina</th>
+				<th allign=left class='th'>Przedmiot</th>
+				<th>Grupa</th>
+				<th>Sala</th>
+				<th>Rodzaj zajęć</th>
+				<th>Uwagi</th>
+			</tr>
+		</thead>
+	</table>
+
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+
+	  $(function() {
+	      $.each(plan, function(i, item) {
+	        var $tr = $('<tr>').append(
+	              $('<td>').text(item.dzien),
+	              $('<td>').text(item.godz),
+	              $('<td>').text(item.przedmiot),
+	              $('<td>').text(item.grupa),
+	              $('<td>').text(item.sala),
+	              $('<td>').text(item.typ),
+	              $('<td>').text(item.uwagi)
+	          );
+	        // console.log($tr.wrap('<p>').html());
+					$('#plan').append($tr);
+	      });
+	});
+	});
+	</script>
+</body>
 
 
 
