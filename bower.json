@@ -1,0 +1,21 @@
+{
+  "name": "my_gulp_project",
+  "description": "Gulp 100 project.",
+  "main": "docs/index.html",
+  "authors": [
+    "mlabuda2 <labuda1996@wp.pl>"
+  ],
+  "license": "ISC",
+  "homepage": "github.com/mlabuda2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.8.1"
+  }
+}
