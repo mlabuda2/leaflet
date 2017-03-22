@@ -11,7 +11,8 @@
 		<link rel="stylesheet" href="assets/stylesheets/table.style.css" />
 		<link rel="stylesheet" href="assets/stylesheets/styleResponsive.css" />
 		<link rel="stylesheet" href="assets/stylesheets/unseen.css" />
-
+		<link rel="stylesheet" href="assets/stylesheets/flip-scroll.css" />
+		<link rel="stylesheet" href="assets/stylesheets/bootstrap-responsive.min.css" />
 </head>
 
 <body>
@@ -26,10 +27,11 @@
 			</div>
 		</section>
 	</div> <!-- class wrapper -->
-
+<div class="container-fluid">
  <section id="unseen">
-	<table id="plan" class='table'>
-		<thead>
+	<h3>Responsywność metodą Ukrywania mniej ważnych kolumn tabelki</h3>
+	<table id="plan" class="table-bordered table-striped table-condensed cf">
+		<thead class="cf">
 			<tr>
 				<th class='th'>Dzien Tygodnia</th>
 				<th class='th'>Godzina</th>
@@ -40,13 +42,13 @@
 				<th class='th'>Rodzaj zajęć</th>
 			</tr>
 		</thead>
-	</table>
+		<tbody>
 
 	<script>
 	document.addEventListener("DOMContentLoaded", function() {
 
 	  $(function() {
-	      $.each(planwb, function(i, item) {
+	      $.each(plantb, function(i, item) {
 	        var $tr = $("<tr class='tr'>").append(
 	              $('<td>').text(item.dzien),
 	              $("<td class='numeric'>").text(item.godz),
@@ -62,7 +64,53 @@
 	});
 	});
 	</script>
+	</tbody>
+	</table>
 </section>
+
+<section id='flip-scroll'>
+	<h3>Responsywność metodą Scrollowania</h3>
+	<table id="plan2" class="table-bordered table-striped table-condensed cf">
+		<thead class="cf">
+			<tr>
+				<th class='th'>Dzien Tygodnia</th>
+				<th class='th'>Godzina</th>
+				<th allign=left class='th'>Przedmiot</th>
+				<th class='th'>Grupa</th>
+				<th class='th' class='numeric'>Sala</th>
+				<th class='th'>Uwagi</th>
+				<th class='th'>Rodzaj zajęć</th>
+			</tr>
+		</thead>
+		<tbody>
+
+
+		<script>
+		document.addEventListener("DOMContentLoaded", function() {
+
+		  $(function() {
+		      $.each(plantb, function(i, item) {
+		        var $tr = $("<tr class='tr'>").append(
+		              $('<td>').text(item.dzien),
+		              $("<td class='numeric'>").text(item.godz),
+		              $('<td>').text(item.przedmiot),
+		              $('<td>').text(item.grupa),
+		              $("<td class='numeric'>").text(item.sala),
+		              $('<td>').text(item.typ),
+		              $('<td>').text(item.uwagi)
+		          );
+		        // console.log($tr.wrap('<p>').html());
+						$('#plan2').append($tr);
+		      });
+		});
+		});
+		</script>
+		</tbody>
+	</table>
+</section>
+
+</div>
+
 </body>
 
 
