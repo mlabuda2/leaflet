@@ -16,3 +16,8 @@
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	background-color: #fefefe;
+}
+
+.numeric{
+  text-align: right;
+}
