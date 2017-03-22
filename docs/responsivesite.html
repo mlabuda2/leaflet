@@ -21,12 +21,30 @@
 			<div id='list'>
 				<div id='prompt'>Podaj nazwisko nauczyciela</div>
 				<form action="">
-				<input list=nauczyciele name=nauczyciel autofocus autocomplete=on />
-				<option value="Borzyszkowski, Tomasz, dr"><option value="Borzyszkowski, Andrzej, dr"><option value="Bzyl, Włodzimierz, dr">
+					<fieldset>
+						<input list=nauczyciele name=nauczyciel value="" autofocus autocomplete=on />
+							<datalist id=nauczyciele>
+								<option value="Borzyszkowski, Tomasz, dr"><option value="Borzyszkowski, Andrzej, dr"><option value="Bzyl, Włodzimierz, dr">
+							</datalist>
+					</fieldset>
 				</form>
 			</div>
 		</section>
 	</div> <!-- class wrapper -->
+<script>
+var fieldValue;
+while(1){
+fieldValue = document.getElementById('nauczyciel').value;
+if (fieldValue.length == NULL) {
+	continue;
+} else {
+	  console.log("czesc";
+	  console.log(document.getElementById('nauczyciel').value);
+		break;
+}
+}
+</script>
+
 <div class="container-fluid">
  <section id="unseen">
 	<h3>Responsywność metodą Ukrywania mniej ważnych kolumn tabelki</h3>
