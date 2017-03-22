@@ -1,4 +1,4 @@
-var plan =
+var plantb =
 [
   {"dzien":"Czwartek",
   "godz":"14:oo",

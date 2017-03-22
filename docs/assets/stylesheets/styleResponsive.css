@@ -1,0 +1,16 @@
+body{
+background: #E9967A
+}
+
+#list {
+	text-align: left;
+	margin: auto;
+	width: 150ex;
+}
+
+#prompt {
+	display: block;
+	font-weight: bold;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
