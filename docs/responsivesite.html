@@ -21,28 +21,24 @@
 			<div id='list'>
 				<div id='prompt'>Podaj nazwisko nauczyciela</div>
 				<form action="">
-					<fieldset>
-						<input list=nauczyciele name=nauczyciel value="" autofocus autocomplete=on />
+						<input list=nauczyciele name=nauczyciel id="nauczycielReg2" value="" autofocus autocomplete=on />
 							<datalist id=nauczyciele>
 								<option value="Borzyszkowski, Tomasz, dr"><option value="Borzyszkowski, Andrzej, dr"><option value="Bzyl, Włodzimierz, dr">
 							</datalist>
-					</fieldset>
 				</form>
 			</div>
 		</section>
 	</div> <!-- class wrapper -->
+
 <script>
 var fieldValue;
-while(1){
-fieldValue = document.getElementById('nauczyciel').value;
-if (fieldValue.length == NULL) {
-	continue;
-} else {
-	  console.log("czesc";
+document.addEventListener("DOMContentLoaded", function() {
+	document.getElementById('nauczycielReg2').addEventListener('change', function() {
+		fieldValue = document.getElementById('nauczyciel').value;
+	  console.log("czesc");
 	  console.log(document.getElementById('nauczyciel').value);
-		break;
-}
-}
+	});
+});
 </script>
 
 <div class="container-fluid">
@@ -126,9 +122,19 @@ if (fieldValue.length == NULL) {
 		</tbody>
 	</table>
 </section>
-
 </div>
 
+<div id='twosources'>
+	<picture>
+	  <source srcset="assets/images/small_mu_img.jpg" media="(max-width: 640px)">
+	  <source srcset="assets/images/mu_img.jpg">
+	  <img src="assets/images/mu_img.jpg" alt="Manchester">
+	</picture>
+</div>
+
+<div id='ezcss'>
+<img src="assets/images/morze.jpg" alt="Morze">
+</div>
 </body>
 
 

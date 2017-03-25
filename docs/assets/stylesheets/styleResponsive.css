@@ -1,5 +1,24 @@
+@font-face {
+font-family: 'Open Sans';
+src:
+    local('Open Sans'),
+    local('OpenSans-Regular'),
+    url('Open_Sans/OpenSans-Regular.ttf');
+}
+
 body{
-background: #E9967A
+background: #E9967A;
+font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper{
+  width: 800px;
+  margin: 0 auto;
+}
+
+.container-fluid{
+     width: 800px;
+     margin: 0 auto;
 }
 
 #list {
@@ -13,4 +32,16 @@ background: #E9967A
 	font-weight: bold;
 	margin-top: 2em;
 	margin-bottom: 1em;
+}
+
+#twosources{
+  text-align: center;
+}
+
+#ezcss{
+    width: 100%;
+    height: 400px;
+    background-image: url('assets/images/morze.jpg');
+    background-size: cover;
+    border: 1px solid red;
 }
