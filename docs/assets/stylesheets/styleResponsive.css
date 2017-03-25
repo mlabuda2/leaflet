@@ -5,43 +5,44 @@ src:
     local('OpenSans-Regular'),
     url('Open_Sans/OpenSans-Regular.ttf');
 }
-
+h1{
+  width: 750px;
+  margin: 0 auto;
+}
 body{
 background: #E9967A;
 font-family: 'Open Sans', sans-serif;
 }
 
 .wrapper{
-  width: 800px;
+
   margin: 0 auto;
 }
 
 .container-fluid{
-     width: 800px;
+     width: 750px;
      margin: 0 auto;
 }
 
 #list {
 	text-align: left;
-	margin: auto;
-	width: 150ex;
+	margin: 0 auto;
+	width: 150px;
 }
 
 #prompt {
 	display: block;
 	font-weight: bold;
-	margin-top: 2em;
-	margin-bottom: 1em;
+	margin-top: 2px;
+	margin-bottom: 1px;
 }
 
+/*obrazki*/
 #twosources{
   text-align: center;
 }
 
-#ezcss{
+img {
     width: 100%;
-    height: 400px;
-    background-image: url('assets/images/morze.jpg');
-    background-size: cover;
-    border: 1px solid red;
+    height: auto;
 }
