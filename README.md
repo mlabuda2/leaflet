@@ -6,7 +6,7 @@ Autor: Mateusz Labuda, nr indeksu 243689
 
 ## Zaliczenia
 
-1\. [deadline 05.03.2017] [Mapka Google Components](https://mlabuda2.github.io/ti_2017/googlemap)
+1\. [deadline 05.03.2017] [Mapka Cern GC](https://mlabuda2.github.io/ti_2017/googlemap)
 + [x] Adding google-map to first WWW.
 + [x] [gulp-server-livereload](https://www.npmjs.com/package/gulp-server-livereload)
 + [x] Pull request to [projects.md](https://github.com/h5c3j/ti/blob/master/projects.md).
