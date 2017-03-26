@@ -26,8 +26,8 @@ Autor: Mateusz Labuda, nr indeksu 243689
 [Alignment Matters:](https://medium.com/mission-log/design-better-data-tables-430a30a00d8c#.fphiqpenc)
 ```sh
 3½ simple rules to follow:
-1. Numerical data is right-aligned
-2. Textual data is left-aligned
-3. Headers are aligned with their data
-3½. Don’t use center alignment.
++ [x] 1. Numerical data is right-aligned
++ [x] 2. Textual data is left-aligned
++ [x]3. Headers are aligned with their data
++ [x] 3½. Don’t use center alignment.
 ```
