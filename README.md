@@ -23,7 +23,7 @@ Autor: Mateusz Labuda, nr indeksu 243689
 
 3\. responsive [Responsively](https://mlabuda2.github.io/ti_2017/responsivesite.html)
 
-# [Alignment Matters:](https://medium.com/mission-log/design-better-data-tables-430a30a00d8c#.fphiqpenc)
+[Alignment Matters:](https://medium.com/mission-log/design-better-data-tables-430a30a00d8c#.fphiqpenc)
 ```sh
 3½ simple rules to follow:
 1. Numerical data is right-aligned
