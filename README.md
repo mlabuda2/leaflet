@@ -21,7 +21,7 @@ Autor: Mateusz Labuda, nr indeksu 243689
 + [x] [Leaflet JavaScript Library](http://leafletjs.com/).
 + [x] Pull request to [projects.md](https://github.com/h5c3j/ti/blob/master/projects.md).
 
-3\. responsive
+3\. responsive [Responsively](https://mlabuda2.github.io/ti_2017/responsivesite.html)
 
 # [Alignment Matters:](https://medium.com/mission-log/design-better-data-tables-430a30a00d8c#.fphiqpenc)
 ```sh
