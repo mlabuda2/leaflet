@@ -9,19 +9,17 @@ h1{
   width: 750px;
   margin: 0 auto;
 }
+
 body{
 background: #E9967A;
 font-family: 'Open Sans', sans-serif;
 }
 
-.wrapper{
-
-  margin: 0 auto;
+table{
+max-width: 100%;
 }
-
-.container-fluid{
-     width: 750px;
-     margin: 0 auto;
+.wrapper{
+  margin: 0 auto;
 }
 
 #list {

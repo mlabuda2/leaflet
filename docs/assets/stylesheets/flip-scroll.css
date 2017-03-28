@@ -4,10 +4,10 @@
 	#flip-scroll * html .cf { zoom: 1; }
 	#flip-scroll *:first-child+html .cf { zoom: 1; }
 
-	#flip-scroll table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+	#flip-scroll table { border-collapse: collapse; border-spacing: 0; }
 
 	#flip-scroll th,
-	#flip-scroll td { margin: 0; vertical-align: top; }
+	#flip-scroll td { margin: 0; vertical-align: middle; }
 	#flip-scroll th { text-align: left; }
 
 	#flip-scroll table { display: block; position: relative; width: 100%; }
@@ -21,9 +21,7 @@
 
 	 /*sort out borders*/
 
-	#flip-scroll th { border-bottom: 0; border-left: 0; }
-	#flip-scroll td { border-left: 0; border-right: 0; border-bottom: 0; }
-	#flip-scroll tbody tr { border-left: 1px solid #babcbf; }
-	#flip-scroll th:last-child,
+	#flip-scroll tbody tr { border-left: 2px solid #babcbf}
+	#flip-scroll th:last-child{border-bottom: 1px}
 	#flip-scroll td:last-child { border-bottom: 1px solid #babcbf; }
 }

@@ -1,53 +1,54 @@
-// var gulp  = require('gulp'),
-//     gutil = require('gulp-util');
-//
-// create a default task and just log a message
-// gulp.task('default', function() {
-//   return gutil.log('Gulp is running!')
-// });
-
+/*
 var gulp   = require('gulp'),
     livereload = require('gulp-livereload'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    jshint = require('gulp-jshint'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat');
+*/
 
-// define the default task and add the watch task to it
+//poprawa szybkosci gulpa - wybiera tylko potrzebne pluginy
+var gulp = require('gulp'),
+    gulpLoadPlugins = require('gulp-load-plugins'),
+    plugins = gulpLoadPlugins();
+
+var htmlDir = "docs/*.html",
+    cssDir =  "docs/assets/stylesheets/*.css",
+    jsDir = "docs/assets/js/*.js";
+
 gulp.task('default', ['watch']);
 
 gulp.task('html', function() {
-  return gulp.src('src/index.html')
+  return gulp.src('docs/*.html')
     .pipe(gulp.dest('dist'));
 });
-
-var htmlDir = "docs/*.html";
-var cssDir =  "docs/assets/stylesheets/*.css";
-// var jsDir = "docs/assets/js/*.js";
-// var cssDir2 =  "docs/assets/stylesheets/*.css";
-// configure which files to watch and what tasks to use on file changes
+/*
+gulp.task('js', function () {
+   return gulp.src('js/*.js')
+      .pipe(jshint())
+      .pipe(jshint.reporter('default'))
+      .pipe(uglify())
+      .pipe(concat('app.js'))
+      .pipe(gulp.dest('build'));
+});
+*/
 gulp.task('watch', function() {
-  livereload.listen();
+  plugins.livereload.listen();
   gulp.watch(htmlDir, function(){
-    gulp.src(htmlDir).pipe(livereload());
+    gulp.src(htmlDir).pipe(plugins.livereload());
   });
   gulp.watch(cssDir, function(){
-    gulp.src(cssDir).pipe(livereload());
+    gulp.src(cssDir).pipe(plugins.livereload());
   });
-  // gulp.watch(jsDir, function(){
-  //   gulp.src(jsDir).pipe(livereload());
-  // });
-  // gulp.watch('src/index.html', ['html']);
-  // gulp.watch('docs/index.html', ['html']);
-  connect.server({
+/*  gulp.watch(jsDir, function(){
+    gulp.src(jsDir).pipe(livereload());
+  }); */
+  gulp.watch('docs/*.html', ['html']);
+
+  plugins.connect.server({
     livereload: true,
+    root: 'docs',
     directoryListing: true,
     defaultFile: 'responsivesite.html'
   });
 });
-
-//livereload
-// gulp.task('connect', function() {
-//     connect.server({
-//       livereload: true,
-//       directoryListing: true,
-//       defaultFile: 'index.html'
-//     });
-// });
