@@ -1,5 +1,7 @@
 ### Techniki Internetowe
 
+Link do projektu: https://mlabuda2.github.io/ti_2017/
+
 ```sh
 Autor: Mateusz Labuda, nr indeksu 243689
 ```
