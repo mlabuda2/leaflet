@@ -15,9 +15,11 @@ background: #E9967A;
 font-family: 'Open Sans', sans-serif;
 }
 
-table{
-max-width: 100%;
+section{
+  padding-left: 50px;
+  padding-right: 50px;
 }
+
 .wrapper{
   margin: 0 auto;
 }
