@@ -10,6 +10,7 @@ h1{
 #nav {
   text-align: center;
   padding: 1em 0;
+  animation: slideInDown 1.5s;
 }
 
 #mulogo{
@@ -32,9 +33,12 @@ h1{
 body {
   background: #f5f7f9;
   font-family:"Lato",sans-serif;
-  animation: slideInDown 0.5s;
   background-image: url("../images/forest.jpg");
   background-position: 50%;
+}
+
+.flex-container{
+  animation: slideInDown 1s;
 }
 
 img{
