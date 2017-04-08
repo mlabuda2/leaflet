@@ -15,9 +15,13 @@ background: #E9967A;
 font-family: 'Open Sans', sans-serif;
 }
 
+#home{
+  padding-left: 2em;
+}
+
 section{
   padding-left: 50px;
-  padding-right: 50px;
+  padding-right: 50px
 }
 
 .wrapper{
