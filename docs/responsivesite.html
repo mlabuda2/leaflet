@@ -13,8 +13,6 @@
 		<link rel="stylesheet" href="assets/stylesheets/styleResponsive.css" />
 		<link rel="stylesheet" href="assets/stylesheets/unseen.css" />
 		<link rel="stylesheet" href="assets/stylesheets/flip-scroll.css" />
-		<!-- <link rel="stylesheet" href="assets/stylesheets/bootstrap-responsive.min.css" /> -->
-		<!-- <link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css" /> -->
 </head>
 
 <body>
@@ -26,7 +24,7 @@
 			<div id='list'>
 				<div id='prompt'>Podaj nazwisko nauczyciela</div>
 				<form action="">
-						<input list=nauczyciele name=nauczyciel id="nauczycielReg2" value="" autofocus autocomplete=on />
+						<input list=nauczyciele name=nauczyciel id="nauczycielid" value="" autofocus autocomplete=on />
 							<datalist id=nauczyciele>
 								<option value="Borzyszkowski, Tomasz, dr"><option value="Borzyszkowski, Andrzej, dr"><option value="Bzyl, Włodzimierz, dr">
 							</datalist>
@@ -38,10 +36,11 @@
 <script>
 var fieldValue;
 document.addEventListener("DOMContentLoaded", function() {
-	document.getElementById('nauczycielReg2').addEventListener('change', function() {
-		fieldValue = document.getElementById('nauczyciel').value;
+	document.getElementById('nauczycielid').addEventListener('change', function() {
+		fieldValue = document.getElementById('nauczycielid').value;
 	  console.log("czesc");
-	  console.log(document.getElementById('nauczyciel').value);
+		console.log(document.getElementById('nauczycielid').value);
+	  console.log(fieldValue);
 	});
 });
 </script>
@@ -94,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		<caption>Tytuł tabeli</caption>
 		<thead class="cf">
 			<tr>
-				<th class='th'>Dzien Tygodnia</th>
+				<th class='th'>Dzień</th>
 				<th class='th'>Godzina</th>
 				<th class='th'>Przedmiot</th>
 				<th class='th'>Grupa</th>

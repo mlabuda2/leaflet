@@ -6,7 +6,8 @@ src:
     url('Open_Sans/OpenSans-Regular.ttf');
 }
 h1{
-  width: 750px;
+  text-align: center;
+  width: auto;
   margin: 0 auto;
 }
 
@@ -19,9 +20,11 @@ font-family: 'Open Sans', sans-serif;
   padding-left: 2em;
 }
 
+@media only screen and (min-width: 800px) {
 section{
   padding-left: 50px;
   padding-right: 50px
+}
 }
 
 .wrapper{

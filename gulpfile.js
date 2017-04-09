@@ -24,9 +24,9 @@ gulp.task('html', function() {
 });
 
 gulp.task('js', function () {
-   return gulp.src('js/*.js')
-      .pipe(jshint())
-      .pipe(jshint.reporter('default'))
+   return gulp.src('docs/assets/js/*.js')
+      .pipe(plugins.jshint())
+      .pipe(plugins.jshint.reporter('default'));
       // .pipe(uglify())
       // .pipe(concat('app.js'))
       // .pipe(gulp.dest('build'));
