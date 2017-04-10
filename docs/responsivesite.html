@@ -23,17 +23,19 @@
 		<section>
 			<div id='list'>
 				<div id='prompt'>Podaj nazwisko nauczyciela</div>
-				<form action="">
+				<form id='formid' action="">
 						<input list=nauczyciele name=nauczyciel id="nauczycielid" value="" autofocus autocomplete=on />
 							<datalist id=nauczyciele>
-								<option value="Borzyszkowski, Tomasz, dr"><option value="Borzyszkowski, Andrzej, dr"><option value="Bzyl, Włodzimierz, dr">
+								<option value="Borzyszkowski, Tomasz, dr"><option value="Bzyl, Włodzimierz, dr">
 							</datalist>
+						<button type="reset">Wyczyść</button>
+						<button type="button">Pokaż</button>
 				</form>
 			</div>
 		</section>
 	</div> <!-- class wrapper -->
 
-<script>
+<!-- <script>
 var fieldValue;
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById('nauczycielid').addEventListener('change', function() {
@@ -41,9 +43,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	  console.log("czesc");
 		console.log(document.getElementById('nauczycielid').value);
 	  console.log(fieldValue);
+
 	});
 });
-</script>
+</script> -->
 
 <div class="container-fluid">
  <section id="unseen">
@@ -65,22 +68,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	<script>
 	document.addEventListener("DOMContentLoaded", function() {
+		var fieldValue;
+		var zmiennaplan;
+		document.getElementById('nauczycielid').addEventListener('change', function() {
+			fieldValue = document.getElementById('nauczycielid').value;
+			if(fieldValue == "Bzyl, Włodzimierz, dr"){
+				zmiennaplan = planwb;
+			}else if (fieldValue == "Borzyszkowski, Tomasz, dr") {
+				zmiennaplan = plantb;
+			}
 
-	  $(function() {
-	      $.each(plantb, function(i, item) {
-	        var $tr = $("<tr class='tr'>").append(
-	              $('<td>').text(item.dzien),
-	              $("<td class='numeric'>").text(item.godz),
-	              $('<td>').text(item.przedmiot),
-	              $('<td>').text(item.grupa),
-	              $("<td class='numeric'>").text(item.sala),
-	              $('<td>').text(item.typ),
-	              $('<td>').text(item.uwagi)
-	          );
-	        // console.log($tr.wrap('<p>').html());
-					$('#plan').append($tr);
-	      });
-	});
+		  $(function() {
+		      $.each(zmiennaplan, function(i, item) {
+		        var $tr = $("<tr class='tr'>").append(
+		              $('<td>').text(item.dzien),
+		              $("<td class='numeric'>").text(item.godz),
+		              $('<td>').text(item.przedmiot),
+		              $('<td>').text(item.grupa),
+		              $("<td class='numeric'>").text(item.sala),
+		              $('<td>').text(item.typ),
+		              $('<td>').text(item.uwagi)
+		          );
+						$('#plan').append($tr);
+		      });
+			});
+		});
 	});
 	</script>
 	</tbody>
@@ -107,22 +119,32 @@ document.addEventListener("DOMContentLoaded", function() {
 </section>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+	var fieldValue;
+	var zmiennaplan;
+	document.getElementById('nauczycielid').addEventListener('change', function() {
+		fieldValue = document.getElementById('nauczycielid').value;
+		if(fieldValue == "Bzyl, Włodzimierz, dr"){
+			zmiennaplan = planwb;
+		}else if (fieldValue == "Borzyszkowski, Tomasz, dr") {
+			zmiennaplan = plantb;
+		}
 
-	$(function() {
-			$.each(plantb, function(i, item) {
-				var $tr = $("<tr class='tr'>").append(
-							$('<td>').text(item.dzien),
-							$("<td class='numeric'>").text(item.godz),
-							$('<td>').text(item.przedmiot),
-							$('<td>').text(item.grupa),
-							$("<td class='numeric'>").text(item.sala),
-							$('<td>').text(item.typ),
-							$('<td>').text(item.uwagi)
-					);
-				// console.log($tr.wrap('<p>').html());
-				$('#plan2').append($tr);
-			});
-});
+		$(function() {
+				$.each(zmiennaplan, function(i, item) {
+					var $tr = $("<tr class='tr'>").append(
+								$('<td>').text(item.dzien),
+								$("<td class='numeric'>").text(item.godz),
+								$('<td>').text(item.przedmiot),
+								$('<td>').text(item.grupa),
+								$("<td class='numeric'>").text(item.sala),
+								$('<td>').text(item.typ),
+								$('<td>').text(item.uwagi)
+						);
+					// console.log($tr.wrap('<p>').html());
+					$('#plan2').append($tr);
+				});
+		});
+	});
 });
 	</script>
 </div>
