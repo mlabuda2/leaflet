@@ -42,7 +42,7 @@ li{
     left: 0;
     height: 2em;
     padding: 0.7rem;
-    background-color: #3399ff;
+    background-color: #FF6600;
     text-align: center;
     font-size: 10px;
     font-style: italic;
@@ -79,7 +79,7 @@ img:hover {
 
 .flex-item a {
   text-decoration:none;
-  color:#69c;
+  color:#FF6600;
   font-size:1.1em;
   font-weight: bold;
 }
