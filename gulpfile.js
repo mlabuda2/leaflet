@@ -74,13 +74,12 @@ gulp.task('commit', ['add'], function(){
     },  function(res){
       /* Pliki do commitowania... trzeba w ten sposób bo prompt nie do końca działa z pipe'ami */
       return gulp.src([ '!node_modules/','!dist', '!test.html', '!testcss.css', './*' ], {buffer:false})
-      .pipe(plugins.git.commit(res.commit))
-      console.log('Wykonano commit')
+      .pipe(plugins.git.commit(res.commit));
     }));
 });
 
 /* Git Add + Commit + Push */
-gulp.task('git',['commit'], function(){
+gulp.task('push', function(){
     plugins.git.push('origin', ['master'], function(err) {
       if (err) throw err;
     });
