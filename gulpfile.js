@@ -57,7 +57,7 @@ gulp.task('addcommit', function(){
     .pipe(plugins.git.commit('auto-commit-gulp'))
 });
 
-gulp.task('push',['addcommit'], function(){
+gulp.task('git',['addcommit'], function(){
     plugins.git.push('origin', ['master'], function(err) {
       if (err) throw err;
     });
