@@ -74,7 +74,8 @@ gulp.task('commit', ['add'], function(){
     },  function(res){
       /* Pliki do commitowania... trzeba w ten sposób bo prompt nie do końca działa z pipe'ami */
       return gulp.src([ '!node_modules/','!dist', '!test.html', '!testcss.css', './*' ], {buffer:false})
-      .pipe(plugins.git.commit(res.commit));
+      .pipe(plugins.git.commit(res.commit))
+      console.log('Wykonano commit')
     }));
 });
 
