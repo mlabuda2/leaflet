@@ -51,12 +51,11 @@ gulp.task('watch', function() {
   });
 });
 
-gulp.task('add',  function(){
+gulp.task('git',  function(){
   return gulp.src('.')
-    .pipe(plugins.git.add({args: '--all'}));
-});
-
-gulp.task('commit', ['add'], function(){
-  return gulp.src('.')
-    .pipe(plugins.git.commit('auto-commit-gulp'));
+    .pipe(plugins.git.add({args: '--all'}))
+    .pipe(plugins.git.commit('auto-commit-gulp'))
+    plugins.git.push('origin', ['master'], function(err) {
+    if (err) throw err;
+  });
 });
