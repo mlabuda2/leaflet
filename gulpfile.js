@@ -51,7 +51,9 @@ gulp.task('watch', function() {
   });
 });
 
-/* Git Add */
+/* GULP-GIT PLUGIN
+
+Git Add */
 gulp.task('add', function(){
     return gulp.src('.')
     .pipe(plugins.git.add({args: '--all'}))
@@ -66,13 +68,11 @@ gulp.task('commit', ['add'], function(){
         name: 'commit',
         message: 'Wprowadź komentarz do commita...'
     },  function(res){
-      // now add all files that should be committed
-      // but make sure to exclude the .gitignored ones, since gulp-git tries to commit them, too
+      /* Pliki do commitowania... trzeba w ten sposób bo prompt nie do końca działa z pipe'ami */
       return gulp.src([ '!node_modules/','!dist', '!test.html', '!testcss.css', './*' ], {buffer:false})
       .pipe(plugins.git.commit(res.commit));
     }));
 });
-
 
 /* Git Add + Commit + Push */
 gulp.task('git',['commit'], function(){
