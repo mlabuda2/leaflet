@@ -5,14 +5,14 @@ npm install --save-dev
 przedrostek 'plugins.' przy nazwie pluginu
 */
 
-/* Poprawa szybkosci gulpa - wybiera tylko potrzebne pluginy*/
+/* Poprawa szybkosci gulpa - wybiera tylko potrzebne pluginy */
 var gulp = require('gulp'),
     gulpLoadPlugins = require('gulp-load-plugins'),
     plugins = gulpLoadPlugins();
 
 var htmlDir = "docs/*.html",
     cssDir =  "docs/assets/stylesheets/*.css",
-    jsDir = "docs/assets/js/*.js";
+    jsDir = ["docs/assets/js/*.js", 'gulpfile.js'];
 
 gulp.task('default', ['watch']);
 
@@ -51,12 +51,27 @@ gulp.task('watch', function() {
   });
 });
 
-gulp.task('addcommit', function(){
-  return gulp.src('.')
+/* Git Add */
+gulp.task('add', function(){
+    return gulp.src('.')
     .pipe(plugins.git.add({args: '--all'}))
-    .pipe(plugins.git.commit('auto-commit-gulp'))
 });
 
+/* Git Add + Git Commit z unikalnym komentarzem */
+gulp.task('commit',['add'], function(){
+  var komentarz;
+  return gulp.src('.')
+    .pipe(plugins.prompt.prompt({
+      type:'input',
+      name: 'commit',
+      message: 'Wprowadź komentarz do commita...'
+    }, function(res){
+      komentarz = res.commit;
+    }))
+    .pipe(plugins.git.commit(komentarz))
+});
+
+/* Git Add + Commit + Push */
 gulp.task('git',['addcommit'], function(){
     plugins.git.push('origin', ['master'], function(err) {
       if (err) throw err;
