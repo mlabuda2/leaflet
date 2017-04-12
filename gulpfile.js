@@ -51,11 +51,14 @@ gulp.task('watch', function() {
   });
 });
 
-gulp.task('git',  function(){
+gulp.task('addcommit', function(){
   return gulp.src('.')
     .pipe(plugins.git.add({args: '--all'}))
     .pipe(plugins.git.commit('auto-commit-gulp'))
-    .pipe(plugins.git.push('origin', ['master'], function(err) {
-    if (err) throw err;
-  }));
+});
+
+gulp.task('push',['addcommit'], function(){
+    plugins.git.push('origin', ['master'], function(err) {
+      if (err) throw err;
+    });
 });
