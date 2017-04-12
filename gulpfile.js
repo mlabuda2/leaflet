@@ -58,22 +58,26 @@ gulp.task('add', function(){
 });
 
 /* Git Add + Git Commit z unikalnym komentarzem */
-gulp.task('commit',['add'], function(){
-  var komentarz;
-  return gulp.src('.')
+gulp.task('commit', ['add'], function(){
+    // just source anything here - we just wan't to call the prompt for now
+    gulp.src('package.json')
     .pipe(plugins.prompt.prompt({
-      type:'input',
-      name: 'commit',
-      message: 'Wprowadź komentarz do commita...'
-    }, function(res){
-      komentarz = res.commit;
-    }))
-    .pipe(plugins.git.commit(komentarz))
+        type: 'input',
+        name: 'commit',
+        message: 'Wprowadź komentarz do commita...'
+    },  function(res){
+      // now add all files that should be committed
+      // but make sure to exclude the .gitignored ones, since gulp-git tries to commit them, too
+      return gulp.src([ '!node_modules/','!dist', '!test.html', '!testcss.css', './*' ], {buffer:false})
+      .pipe(plugins.git.commit(res.commit));
+    }));
 });
 
+
 /* Git Add + Commit + Push */
-gulp.task('git',['addcommit'], function(){
+gulp.task('git',['commit'], function(){
     plugins.git.push('origin', ['master'], function(err) {
       if (err) throw err;
     });
 });
+
