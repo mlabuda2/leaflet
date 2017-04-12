@@ -55,7 +55,7 @@ gulp.task('git',  function(){
   return gulp.src('.')
     .pipe(plugins.git.add({args: '--all'}))
     .pipe(plugins.git.commit('auto-commit-gulp'))
-    plugins.git.push('origin', ['master'], function(err) {
+    .pipe(plugins.git.push('origin', ['master'], function(err) {
     if (err) throw err;
-  });
+  }));
 });
