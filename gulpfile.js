@@ -52,6 +52,10 @@ gulp.task('watch', function() {
 });
 
 /* GULP-GIT PLUGIN
+możliwy bug node:Regex
+rozwiazanie: dodać to do screen-manager.js :
+cliWidth.defaultWidth = 80;
+
 
 Git Add */
 gulp.task('add', function(){
