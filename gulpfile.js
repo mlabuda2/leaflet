@@ -1,13 +1,11 @@
 /*
-var gulp   = require('gulp'),
-    livereload = require('gulp-livereload'),
-    connect = require('gulp-connect'),
-    jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat');
+-Instalacja z devDependencies:
+npm install --save-dev
+-Jak używać:
+przedrostek 'plugins.' przy nazwie pluginu
 */
 
-//poprawa szybkosci gulpa - wybiera tylko potrzebne pluginy
+/* Poprawa szybkosci gulpa - wybiera tylko potrzebne pluginy*/
 var gulp = require('gulp'),
     gulpLoadPlugins = require('gulp-load-plugins'),
     plugins = gulpLoadPlugins();
@@ -23,10 +21,10 @@ gulp.task('html', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('js', function () {
+gulp.task('lint', function () {
    return gulp.src('docs/assets/js/*.js')
       .pipe(plugins.jshint())
-      .pipe(plugins.jshint.reporter('default'));
+      .pipe(plugins.jshint.reporter('jshint-stylish'));
       // .pipe(uglify())
       // .pipe(concat('app.js'))
       // .pipe(gulp.dest('build'));
@@ -40,8 +38,8 @@ gulp.task('watch', function() {
   gulp.watch(cssDir, function(){
     gulp.src(cssDir).pipe(plugins.livereload());
   });
-  gulp.watch(jsDir, ['js'], function(){
-    gulp.src(jsDir).pipe(livereload());
+  gulp.watch(jsDir, ['lint'], function(){
+    gulp.src(jsDir).pipe(plugins.livereload());
   });
   gulp.watch('docs/*.html', ['html']);
 
@@ -51,4 +49,14 @@ gulp.task('watch', function() {
     directoryListing: true,
     defaultFile: 'responsivesite.html'
   });
+});
+
+gulp.task('add',  function(){
+  return gulp.src('.')
+    .pipe(plugins.git.add({args: '--all'}));
+});
+
+gulp.task('commit', ['add'], function(){
+  return gulp.src('.')
+    .pipe(plugins.git.commit('auto-commit-gulp'));
 });

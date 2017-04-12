@@ -8,7 +8,7 @@ var szablon = Handlebars.compile(zrodlo);
 var dane = {
 		imie: "Marek",
 		nazwisko: "Kowalski"
-	}
+	};
 
 // Wygenerowanie gotowego kodu z szablonu
 var html = szablon(dane);
