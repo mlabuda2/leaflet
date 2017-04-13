@@ -68,7 +68,7 @@ nav ul {
   position: absolute;
   overflow: hidden;
   padding:20px;
-  top:-20px;
+  top:-60px;
   border-radius:2px;
   transition: all 0.5s;
   transform: translateY(100px);
