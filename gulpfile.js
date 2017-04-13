@@ -47,7 +47,7 @@ gulp.task('watch', function() {
     livereload: true,
     root: 'docs',
     directoryListing: true,
-    defaultFile: 'responsivesite.html'
+    defaultFile: 'index.html'
   });
 });
 
