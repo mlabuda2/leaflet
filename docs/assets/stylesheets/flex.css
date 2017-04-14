@@ -107,6 +107,29 @@ nav ul {
   transform: translateY(-50%) rotate(45deg);
 }
 
+.link3 > li{
+  margin-bottom: 1.2em;
+}
+.link3 > li:last-child {
+  margin-bottom: 0;
+}
+.button {
+  border-radius: 4px;
+  padding: 0.4em;
+  text-decoration: none;
+  color : white;
+}
+.button[href*=facebook]{
+  background: #3779e5;
+}
+.button[href*=manutd]{
+  background: #b72512;
+}
+.button[href*=natemat]{
+  background: #e08f1f;
+}
+
+
 #footer {
     /*margin-top: -3em;*/
     position: fixed;
