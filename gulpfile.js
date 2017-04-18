@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 var htmlDir = "docs/*.html",
     cssDir =  "docs/assets/stylesheets/*.css",
-    jsDir = ["docs/assets/js/*.js", 'gulpfile.js'];
+    jsDir = ['docs/assets/js/*.js', 'gulpfile.js'];
 
 gulp.task('default', ['watch']);
 

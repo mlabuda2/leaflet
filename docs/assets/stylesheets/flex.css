@@ -54,6 +54,7 @@ nav ul {
   padding: 0.65em 1.5em;
   display: inline-block;
   border-radius:0.5em;
+  text-decoration: none;
 }
 
 .cool > li {
