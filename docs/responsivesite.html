@@ -32,9 +32,9 @@
 		          {{#each this}}
 		            <tr>
 		              <td>{{dzien}}</td>
-		              <td>{{godzina}}</td>
+		              <td>{{godz}}</td>
 		              <td>{{przedmiot}}</td>
-		              <td>{{nauczyciel<br>'}}</td>
+		              <td>{{nauczyciel}}</td>
 		              <td>{{rodzaj}}</td>
 		              <td>{{sala}}</td>
 		            </tr>
@@ -115,14 +115,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		      $.each(zmiennaplan, function(i, item) {
 		        var $tr = $("<tr class='tr'>").append(
 		              $('<td>').text(item.dzien),
-		              $("<td class='numeric'>").text(item.godz),
+		              $('<td>').text(item.godz),
 		              $('<td>').text(item.przedmiot),
 		              $('<td>').text(item.grupa),
-		              $("<td class='numeric'>").text(item.sala),
+		              $('<td>').text(item.sala),
 		              $('<td>').text(item.typ),
 		              $('<td>').text(item.uwagi)
 		          );
-						$('#plan').append($tr);
+					$('#plan').append($tr);
 		      });
 			});
 		});

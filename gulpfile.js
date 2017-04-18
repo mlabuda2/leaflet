@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 
 var htmlDir = "docs/*.html",
     cssDir =  "docs/assets/stylesheets/*.css",
-    jsDir = ['docs/assets/js/*.js', 'gulpfile.js'];
+    jsDir = ["docs/assets/js/*.js", "gulpfile.js"];
 
 gulp.task('default', ['watch']);
 
@@ -38,10 +38,11 @@ gulp.task('watch', function() {
   gulp.watch(cssDir, function(){
     gulp.src(cssDir).pipe(plugins.livereload());
   });
-  gulp.watch(jsDir, ['lint'], function(){
+  gulp.watch(jsDir, function(){
     gulp.src(jsDir).pipe(plugins.livereload());
   });
-  gulp.watch('docs/*.html', ['html']);
+  gulp.watch(htmlDir, ['html']);
+  gulp.watch(jsDir, ['lint']);
 
   plugins.connect.server({
     livereload: true,
