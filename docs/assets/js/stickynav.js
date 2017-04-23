@@ -40,3 +40,14 @@ function handleLeave() {
 
 triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
 triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
+
+
+// Czyszczenie tabeli przyciskiem
+
+const clear = document.querySelector("#clear");
+
+function clearButton(){
+	console.log("Kliknięcie");
+}
+
+clear.forEach(trigger => trigger.addEventListener('onclick', clearButton));

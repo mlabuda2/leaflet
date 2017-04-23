@@ -19,7 +19,7 @@ var url2 = 'https://inf.ug.edu.pl/plan/?nauczyciel=Borzyszkowski%2C+Andrzej%2C+d
     success: function (data) {
         // console.log(JSON.stringify(data));
         localStorage.setItem('plan', JSON.stringify(data));
-        console.log(localStorage.getItem('plan'));
+        // console.log(localStorage.getItem('plan'));
        
         // Kompilujemy szablon
 		var szablon = Handlebars.compile(zrodlo);

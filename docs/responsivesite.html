@@ -15,35 +15,6 @@
 		<link rel="stylesheet" href="assets/stylesheets/unseen.css" />
 		<link rel="stylesheet" href="assets/stylesheets/flip-scroll.css" />
 
-		<script id="wstawka" type="text/x-handlebars-template">
-	    	<table>
-		        <thead>
-		          <tr>
-					<th>Dzien Tygodnia</th>
-					<th>Godzina</th>
-					<th>Przedmiot</th>
-					<th>Grupa</th>
-					<th>Sala</th>
-					<th>Uwagi</th>
-					<th>Rodzaj zajęć</th>
-		          </tr>
-		        </thead>
-		        <tbody>
-		          {{#each this}}
-		            <tr>
-		              <td>{{dzien}}</td>
-		              <td>{{godz}}</td>
-		              <td>{{przedmiot}}</td>
-		              <td>{{nauczyciel}}</td>
-		              <td>{{rodzaj}}</td>
-		              <td>{{sala}}</td>
-		            </tr>
-				  {{/each}}
-		        </tbody>
-		    </table>
-		  	</br></br>
-		</script>
-</head>
 
 <body>
 
@@ -59,7 +30,7 @@
 							<datalist id=nauczyciele>
 								<option value="Borzyszkowski, Tomasz, dr"><option value="Bzyl, Włodzimierz, dr">
 							</datalist>
-						<button type="reset">Wyczyść</button>
+						<button id="clear" type="reset">Wyczyść</button>
 						<button type="button">Pokaż</button>
 				</form>
 			</div>
@@ -67,19 +38,6 @@
 	</div> <!-- class wrapper -->
 	<script src="assets/js/script.js" type="text/javascript"></script>
 
-
-<!-- <script>
-var fieldValue;
-document.addEventListener("DOMContentLoaded", function() {
-	document.getElementById('nauczycielid').addEventListener('change', function() {
-		fieldValue = document.getElementById('nauczycielid').value;
-	  console.log("czesc");
-		console.log(document.getElementById('nauczycielid').value);
-	  console.log(fieldValue);
-
-	});
-});
-</script> -->
 
 <div class="container-fluid">
  <section id="unseen">

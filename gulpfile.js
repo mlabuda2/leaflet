@@ -27,7 +27,7 @@ gulp.task('lint', function () {
       .pipe(plugins.jshint.reporter('jshint-stylish'));
       // .pipe(uglify())
       // .pipe(concat('app.js'))
-      // .pipe(gulp.dest('build'));
+      // .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() {
