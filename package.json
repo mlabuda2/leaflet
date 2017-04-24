@@ -14,7 +14,8 @@
     "jshint-stylish": "^2.2.1",
     "gulp-git": "~2.1.0",
     "gulp-prompt": "~0.2.0",
-    "gulp-util": "~3.0.8"
+    "gulp-util": "~3.0.8",
+    "gulp-imagemin": "~3.2.0"
   },
   "dependencies": {
     "gulp-livereload": "^3.8.1"

@@ -44,10 +44,21 @@ triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave))
 
 // Czyszczenie tabeli przyciskiem
 
-const clear = document.querySelector("#clear");
+const clear = document.getElementById('clear');
 
-function clearButton(){
+clear.addEventListener('click', function() {
 	console.log("Kliknięcie");
-}
+ 	$("#plan2 tbody tr").remove();
+ 	$("#plan tbody tr").remove();
+});
 
-clear.forEach(trigger => trigger.addEventListener('onclick', clearButton));
+/*
+const usunipokaz = document.getElementById('usunpokaz');
+
+usunpokaz.addEventListener('onclick', function() {
+	$("#plan2 tbody tr").remove();
+ 	$("#plan tbody tr").remove();
+});
+*/
+//todo przekopiowane z htmla do js i trzeba przerobic
+

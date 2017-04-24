@@ -86,3 +86,9 @@ gulp.task('push', function(){
     });
 });
 
+gulp.task('imagemin', () =>
+    gulp.src('docs/assets/images/*')
+        .pipe(plugins.imagemin())
+        .pipe(gulp.dest('dist/images'))
+);
+
