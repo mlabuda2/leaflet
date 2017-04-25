@@ -21,24 +21,66 @@
   transform: translateY(-3px); /* account for the height of the clock hands */
 }
 
+.liczby1{
+	width: 9rem;
+	height: 3rem;
+	color: orange;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 0 auto
+}
+.liczby2{
+	width: 9rem;
+	height: 3rem;
+	color: orange;
+	display: flex;
+	align-items: center;
+
+	/*justify-content: space-between;*/
+}
+.trzy{
+	padding-left: 8rem
+}
+.liczby3{
+	width: 9rem;
+	height: 3rem;
+	color: orange;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin: 0 auto;
+}
+
+.dwanascie{
+	align-content: center;
+}
+
 .wskazowka {
   width: 50%;
-  height: 6px;
+  height: 5px;
   background: orange;
   position: absolute;
   top: 50%;
   transform-origin: 100%;
-  transform: rotate(90deg);
   transition: all 0.05s;
   transition-timing-function: cubic-bezier(0, 0, 0.63, 1.59);
 }
 
 .godzina {
+	width: 35%;
 	background: green;
+	height: 7px;
+	transform-origin: 100%;
+	margin-left: 1.33rem
 }
 
 .minuta {
 	background: red;
+}
+
+.sekunda {
+	height: 2px
 }
 
 @keyframes slideInDown {
