@@ -11,7 +11,7 @@
 (function() {
 	
 	function scrollY() {
-		return window.pageYOffset || docElem.scrollTop;
+		return window.pageYOffset || docElem.scrollTop; //odległosc od góry w pikselach (scrollTop dla >IE9)
 	}
 
 	// from http://stackoverflow.com/a/11381730/989439
