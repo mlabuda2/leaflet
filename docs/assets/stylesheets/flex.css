@@ -180,9 +180,11 @@ img{
 .menu-icon {
   grid-column-start: 3;
   margin:auto 0;
-  background-color: #e4a850;
+  background-color: #4C7E00;
+  border-style: solid;
   border-width: 3px;
-  /*border-radius: 50%;*/
+  border-color: white;
+  border-radius: 50%;
   height: 2.2rem;
   width: 2.2rem;
 }
