@@ -123,17 +123,15 @@ nav ul {
 }
 
 
-#footer {
+footer {
     /*margin-top: -3em;*/
-    position: fixed;
-    right: 0;
+    /*position: fixed;*/
     bottom: 0;
-    left: 0;
-    height: 2em;
+    height: 1,7rem;
     padding: 0.7rem;
     background-color: #FF6600;
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
     font-style: italic;
 }
 
@@ -183,9 +181,18 @@ img{
   grid-column-start: 3;
   margin:auto 0;
   background-color: #e4a850;
-  border-radius: 50%;
+  border-width: 3px;
+  /*border-radius: 50%;*/
   height: 2.2rem;
   width: 2.2rem;
+}
+.menu-icon:hover {
+  transform: scale(1.1);
+  background-color: white;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
 }
 
 @keyframes slideInDown {
