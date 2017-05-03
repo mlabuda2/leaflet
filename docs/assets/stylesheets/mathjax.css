@@ -1,0 +1,7 @@
+.math {
+	display: block;
+}
+
+.math > p {
+	text-align: center;
+}

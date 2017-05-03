@@ -19,7 +19,8 @@ header{
   text-align: center;
   animation: slideInDown 1.5s;
   background-image: url("../images/forest.jpg");
-  background-position: 50%;
+  background-attachment: fixed;
+  background-position: center 68%;
 }
 
 .poziom-nav {
@@ -124,12 +125,12 @@ nav ul {
 
 
 footer {
-    /*margin-top: -3em;*/
-    /*position: fixed;*/
+    position: fixed;
     bottom: 0;
-    height: 1,7rem;
+    height: 1.7rem;
+    width: 100%;
     padding: 0.7rem;
-    background-color: #FF6600;
+    background-color: rgba(0,0,0,0.1);
     text-align: center;
     font-size: 12px;
     font-style: italic;
@@ -180,7 +181,7 @@ img{
 .menu-icon {
   grid-column-start: 3;
   margin:auto 0;
-  background-color: #4C7E00;
+  background-color: white;
   border-style: solid;
   border-width: 3px;
   border-color: white;
@@ -190,7 +191,7 @@ img{
 }
 .menu-icon:hover {
   transform: scale(1.1);
-  background-color: white;
+  background-color: transparent;
   -webkit-transition: background-color 0.3s ease-out;
   -moz-transition: background-color 0.3s ease-out;
   -o-transition: background-color 0.3s ease-out;

@@ -181,9 +181,6 @@ button:active {
 	backface-visibility: hidden;
 }
 
-#showmenu2:hover{
-	transform: scale(1.1);
-}
 /*
 .icon-fb {
 	height: 10px;
@@ -274,6 +271,10 @@ button:active {
 	transition-delay: 0.24s;
 }
 
+.effect-moveleft.animate footer {
+	position: relative;
+}
+
 /* Media Queries */
 @media screen and (max-width: 77em) {
 	
@@ -316,7 +317,7 @@ button:active {
 
 	.outer-nav.right {
 		right: auto;
-		left: 40%;
+		left: 36%;
 	}
 }
 
