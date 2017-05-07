@@ -42,15 +42,6 @@ triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter))
 triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
 
 
-// Czyszczenie tabeli przyciskiem
-
-const clear = document.getElementById('clear');
-
-clear.addEventListener('click', function() {
-	console.log("Kliknięcie");
- 	$("#plan2 tbody tr").remove();
- 	$("#plan tbody tr").remove();
-});
 
 /*
 const usunipokaz = document.getElementById('usunpokaz');

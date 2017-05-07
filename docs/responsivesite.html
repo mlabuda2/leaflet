@@ -154,9 +154,22 @@
 <a href="https://mlabuda2.github.io/ti_2017/"><p>Home</p></a>
 
 
+<script>
+// Czyszczenie tabeli przyciskiem
+document.addEventListener("DOMContentLoaded", function(){
 
-<script src="assets/js/stickynav.js" type="text/javascript"></script>
 
+	const clear = document.getElementById('clear');
+	console.dir(clear);
+
+
+	clear.addEventListener('click', function() {
+		console.log("Kliknięcie");
+	 	$("#plan2 tbody tr").remove();
+	 	$("#plan tbody tr").remove();
+	});
+});
+</script>
 </body>
 
 
