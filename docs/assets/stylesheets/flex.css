@@ -152,16 +152,57 @@ img{
   color:#FF6600;
   font-size:1.1em;
   font-weight: bold;
+  padding: 2px 0px 0px 1px;
+  transition: .5s
 }
-
 .flex-item {
+  background-color: white;
   text-align:center;
+  border: 2px solid #262626;
+  overflow: hidden;
 }
 
 .flex-item:hover {
   box-shadow:0 5px 15px rgba(0,0,0,0.3);
-  z-index:1;
-  position:relative
+  z-index: 1;
+  position: relative;
+  transform: scale(1.1);
+  transition: .3s;
+  }
+.flex-item:hover a {
+    color:white;
+}
+
+.wrapper {
+  overflow: hidden;
+  background:white;
+}
+.flex-item:before {
+  content: '';
+  position: absolute;
+  background: white;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  transition: .5s;
+}
+.row:nth-child(odd) .flex-item:before{
+  right: -100%;
+}
+.row:nth-child(odd) .flex-item:hover:before{
+  right: 0%;
+}
+.row:nth-child(even) .flex-item:before{
+  left: -100%;
+}
+.row:nth-child(even) .flex-item:hover:before{
+  left: 0%;
+}
+
+.flex-item:hover:before {
+  right: 0;
+  background: rgba(0,0,0,1);
 }
 .responsive {
   height: 100%;
@@ -219,6 +260,15 @@ img{
     .flex-item p {
         margin: 3px 0 6px
     }
+    .cool {
+        display: none
+    }
+    #mulogo {
+        height: 80px;
+    }
+    h1 {
+        font-size: 1.5em
+    }
 }
 
 @media screen and (min-width: 640px) {
@@ -233,15 +283,18 @@ img{
         margin: 0 3px 10px;
         flex: 0 1 calc(50% - 1em)
     }
-    .flex-item p {
-        margin: -7px 0 6px
-    }
     img:hover {
       transform:scale(1.5);
       box-shadow:0 5px 15px rgba(0,0,0,0.3);
       opacity:0.6;
       z-index:1;
       position:relative
+    }
+    .cool {
+      display: flex
+    }
+    h1 {
+      font-size: 1.8em
     }
 }
 
@@ -252,20 +305,6 @@ img{
 }
 
 @media only screen and (max-width: 640px) {
-  header {
-    height: auto;
-  }
-  h1 {
-    font-size: 1.5em
-  }
-  #mulogo {
-    height: 80px;
-    /*width: 80px;*/
-  }
-  .cool {
-    display: none
-  }
-
 
 }
 @media only screen and (min-width: 640px) {
