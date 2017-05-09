@@ -152,8 +152,12 @@ img{
   color:#FF6600;
   font-size:1.1em;
   font-weight: bold;
-  padding: 2px 0px 0px 1px;
   transition: .5s
+}
+.flex-item p {
+  margin: 0;
+  padding: 0;
+  line-height: 55px;
 }
 .flex-item {
   background-color: white;
@@ -256,9 +260,6 @@ img{
     }
     .row {
         margin: 0 3px 3px
-    }
-    .flex-item p {
-        margin: 3px 0 6px
     }
     .cool {
         display: none
