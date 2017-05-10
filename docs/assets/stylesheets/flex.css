@@ -101,10 +101,10 @@ nav ul {
   transform: translateY(-50%) rotate(45deg);
 }
 
-.link3 > li{
+.link3 > li, .link1 > li{
   margin-bottom: 1.2em;
 }
-.link3 > li:last-child {
+.link3 > li:last-child, .link1 > li:last-child {
   margin-bottom: 0;
 }
 .button {
@@ -121,6 +121,13 @@ nav ul {
 }
 .button[href*=natemat]{
   background: #e08f1f;
+}
+.button-normal {
+  border-radius: 4px;
+  padding: 0.4em;
+  text-decoration: none;
+  color : white;
+  background: rgba(0,0,0,0.4);
 }
 
 
