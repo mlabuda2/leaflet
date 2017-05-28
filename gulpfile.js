@@ -5,7 +5,10 @@ npm install --save-dev
 przedrostek 'plugins.' przy nazwie pluginu
 */
 
-/* Poprawa szybkosci gulpa - wybiera tylko potrzebne pluginy */
+/* Cel: 
+        -Poprawa szybkosci gulpa - wybiera tylko potrzebne pluginy
+        -Oszczędność kodu
+ */
 var gulp = require('gulp'),
     gulpLoadPlugins = require('gulp-load-plugins'),
     plugins = gulpLoadPlugins();

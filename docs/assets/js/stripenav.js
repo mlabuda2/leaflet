@@ -1,3 +1,10 @@
+
+// kod ma być łatwy w prezentacji... bez przeskakiwania po różnych miejscach kodu
+// pokaz mu emulacje przegladarek
+// dodaj prefixy prefixerem gulp https://autoprefixer.github.io/
+// pokaz gulpa
+// male sparametryzowane funkcje /elementarne
+
 const triggers = document.querySelectorAll('.cool > li');
 const background = document.querySelector('.dropdownBackground');
 const nav = document.querySelector('.top');
@@ -9,7 +16,7 @@ function handleEnter() {
 			this.classList.add('trigger-enter-active')
 		}
 	}, 250);
-	background.classList.add('open');
+	background.classList.add('open'); 
 
 	const dropdown = this.querySelector('.dropdown');
 	const navCoords = nav.getBoundingClientRect();
